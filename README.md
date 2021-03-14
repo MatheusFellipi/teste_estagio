@@ -2,7 +2,7 @@
 
 ##Desafio
 
-[Codesandbox]([https://codesandbox.io/s/hopeful-dan-pdtdn?file=/src/exercise10.js))
+[Codesandbox]([https://codesandbox.io/s/hopeful-dan-pdtdn?file=/src/exercise10.js])
 
 ## Desafio
 ### Resolver os seguintes exercícios
