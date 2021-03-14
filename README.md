@@ -1,59 +1,70 @@
-### Teste para estagio
+# Getting Started with Create React App
 
-##Desafio
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Codesandbox](https://codesandbox.io/s/hopeful-dan-pdtdn?file=/src/exercise10.js])
+## Available Scripts
 
-## Desafio
-### Resolver os seguintes exercícios
-- **E.1** Crie uma função que recebe duas strings e retorna a de maior comprimento.
-- **E.2** Dado a seguinte string `‘teste 1 de 2 string 3’`, substitua todas as ocorrências de números por `$`.
-- **E.3** Dado o objeto `{4: ‘a’, 3: ‘e’, 1: ‘i’, 5: ‘s’}` substitua os números na frase `‘T35t3 d3 35t4g1o’` conforme a sua respectiva letra.
-- **E.4** Utilizando a api da viacep (https://viacep.com.br/) e o seu cep como entrada imprima o seu endereço no formato `‘ENDERECO, NUMERO, CIDADE/ESTADO’`. Utilize a [fetch API]([https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API)) para realizar a requisição.
+In the project directory, you can run:
 
-#### Para os exercícios seguintes considere o array de objetos:
-```
-[
-    {id: 1, first_name: ‘Juca’, last_name: ‘Da Silva’, age: 42},
-    {id: 2, first_name: ‘Daniel’, last_name: ‘Gonçalves’,  age: 21},
-    {id: 3, first_name: ‘Matheus’, last_name: ‘Garcia’, age: 28},
-    {id: 4, first_name: ‘Gabriel’, last_name: ‘Dorneles’,  age: 21}
-]
-```
-- **E.5** Imprima uma mensagem de saudação com o nome completo para cada um dos objetos.
-```
-Ex.:
-Olá, Fulano de tal!
-Olá, Juca da silva!
-...
-```
-- **E.6** Imprima a soma das idades (sugestão: utilizar o método [reduce]([https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)))
-- **E.7** Encontre o primeiro objeto que possui uma pessoa com a idade menor que 25 e imprima seu nome. Caso não encontre, imprima que nenhum resultado foi encontrado.
-- **E.8** Imprima todos os elementos em que a idade é menor que 30.
-- **E.9** Ordene o array de forma decrescente por idade, em caso de empate o desempate é pelo id(em ordem crescente).
+### `yarn start`
 
-#### Para o exercício seguinte, considere os arrays de objetos:
-```
-const movies = [
-	{ id: 1, name: 'Joker' },
-	{ id: 2, name: 'Parasite' },
-	{ id: 3, name: 'Avengers' },
-	{ id: 4, name: 'Her' }
-]
-const actors = [
-	{ id: 1, name: 'Cho Yeo-jeong', movie_ids: [2] },
-	{ id: 2, name: 'Robert Downey Jr.', movie_ids: [3] },
-	{ id: 3, name: 'Joaquin Phoenix', movie_ids: [1, 4] },
-	{ id: 4, name: 'Scarlett Johansson', movie_ids: [3] }
-]
-```
-- **E.10** Faça uma função que receba 2 parâmetros: um array de `movies` e um array de `actors`. A função deve retornar um array de `movies`, onde cada `movie` possui a propriedade `actors`, que sera um array com os nomes dos atores. Por ex:
-```
-[
-  {
-	id: 99,
-	name: 'Lorem Ipsum',
-	actors: ['John Doe', 'Jane Doe']
-  }
-]
-```
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `yarn build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `yarn eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `yarn build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

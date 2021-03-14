@@ -1,0 +1,24 @@
+.cardNavers {
+  width: 200px;
+  height: 180px;
+  margin: 0 2rem 0 5rem;
+}
+
+.imgNaver {
+  width: 280px;
+  height: 280px;
+}
+.text {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 1rem;
+}
+.text .name {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+.text .job {
+  font-weight: 400;
+  font-size: 16px;
+}
