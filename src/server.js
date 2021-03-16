@@ -18,19 +18,3 @@ app.use((error, req, res, next) => {
 });
 
 app.listen(3333, () => console.log("server is runing"));
-
-
-
-// Exemplo de resposta do MYSQL
-const resultados = [
-  {
-      coluna1: 'AAAAA',
-      coluna2: 'XXXXX'
-  },{
-      coluna1: 'AAAAA',
-      coluna2: 'YYYYY'
-  },{
-      coluna1: 'BBBBB',
-      coluna2: 'ZZZZZ'
-  },
-]
