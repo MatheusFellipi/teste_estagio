@@ -37,7 +37,7 @@
 
 
               
-                http://localhost:3333/navers?id=14
+                http://localhost:3333/navers/14
 
               
 
@@ -61,7 +61,7 @@
 
          
          
-            http://localhost:3333/navers?id=14
+            http://localhost:3333/project/
           
           
 
@@ -69,7 +69,7 @@
 
        
        
-          http://localhost:3333/navers?id=14
+          http://localhost:3333/project/14
         
         
 
