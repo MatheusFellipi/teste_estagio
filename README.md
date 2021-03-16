@@ -2,8 +2,8 @@
 
 ##Desafio
 
-[Codesandbox](https://codesandbox.io/s/hopeful-dan-pdtdn?file=/src/exercise10.js])
-o desafio do back end e do front esta divido em bransh
+* [Codesandbox](https://codesandbox.io/s/hopeful-dan-pdtdn?file=/src/exercise10.js])
+* o desafio do back end e do front esta divido em bransh
 
 ## Desafio
 ### Resolver os seguintes exercícios
