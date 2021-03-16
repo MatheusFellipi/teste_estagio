@@ -9,9 +9,11 @@
 
 ## Iniciar o projeto
 
+
 ```
-yarn ou npm
+  yarn ou npm
 ```
+
 
 ## dependência utilizada
 
@@ -26,49 +28,63 @@ yarn ou npm
 
   - index Rota para listagem dos Navers, usa `get` `navers`
 
-                ```
+
                   http://localhost:3333/navers
-               ```
+               
+
 
 - (Show) Rota para detalhar informações de um único naver através de seu identificador usa `get` `navers?id`
 
-              ```
+
+              
                 http://localhost:3333/navers?id=14
-              ```
+
+              
+
 
 - (Store) Rota de Criação de Naver `post` `navers`
 
-            ```
+           
+           
                 {
                    "name": "matheus fellipi",
                    "job_role": "Front end",
                    "birthdate": "1998-12-03",
                    "admission_date": "2021-03-14"
                 }
-            ```
+           
+           
+
 
  - Projetos
     - (Index) Rota para listagem dos Projetos, `get` `project`
 
-          ```
+         
+         
             http://localhost:3333/navers?id=14
-          ```
+          
+          
 
     - (Show) Rota para detalhar um projeto `get` `project?navers_id`
 
-        ```
+       
+       
           http://localhost:3333/navers?id=14
-        ```
+        
+        
 
     - (Store) Rota de Criação de Projeto
-              ```
+    
+              
                 {
                     name: Projeto Bom,
                     navers_id: 14,
                 }
-              ```
+              
+              
 
  ## sobre o banco (knex)
+ 
 
   eu utilizei o postegres, voce poder mudar as configuracao no `knexfile`
 

@@ -3,7 +3,13 @@ const knex = require("../database");
 module.exports = {
   async index(req, res, next) {
     try {
-      const results = await knex("navers");
+      const results = await knex("navers").select(
+        "navers.id",
+        "navers.name",
+        "navers.birthdate",
+        "navers.job_role",
+        "navers.admission_date"
+      );
       return res.json(results);
     } catch (error) {
       next(error);
@@ -17,6 +23,7 @@ module.exports = {
 
       query
         .where({ "navers.id": id })
+        .join("project", "project.navers_id", "=", "navers.id")
         .select(
           "navers.id",
           "navers.name",
@@ -24,8 +31,7 @@ module.exports = {
           "navers.job_role",
           "navers.admission_date",
           "project.project"
-        )
-        .join("project", "project.navers_id", "=", "navers.id");
+        );
 
       const results = await query;
 
@@ -51,8 +57,7 @@ module.exports = {
         admission_date,
       });
       return res.status(201).send({
-        message: "navers criando com sucesso",
-        status: 201,
+        message: "navers criado com suceesso",
       });
     } catch (error) {
       next(error);
@@ -68,8 +73,7 @@ module.exports = {
         .update({ name, job_role, birthdate, admission_date })
         .where({ id });
       return res.status(201).send({
-        message: "navers atualizado sucesso",
-        status: 201,
+        message: "navers atualizado com suceesso",
       });
     } catch (error) {
       next(error);
@@ -82,8 +86,7 @@ module.exports = {
       await knex("navers").where({ id }).del();
 
       return res.status(201).send({
-        message: "navers deletado sucesso",
-        status: 201,
+        message: "navers deletado com suceesso",
       });
     } catch (error) {
       next(error);
