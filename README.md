@@ -5,8 +5,25 @@
 - [node.js](https://nodejs.org)
 ## Iniciar o projeto
 
+
+Siga os passos abaixo dentro da pasta após clonar ou baixar o projeto:
+
+```bash
+# Instalar as dependências do projeto
+$ yarn install
+
+ou
+
+$ npm install
 ```
-yarn ou npm
+
+```bash
+# Rodar o projeto
+$ yarn start
+
+ou
+
+$ npm start
 ```
 
 ## dependência utilizada
