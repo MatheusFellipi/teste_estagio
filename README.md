@@ -42,6 +42,7 @@ $ npm start
 - (Show) Rota para detalhar informações de um único naver através de seu identificador usa `get` `navers/:id`
 
 - (Store) Rota de Criação de Naver `post` `navers`
+
             ```
                 {
                    "name": "matheus fellipi",
@@ -59,7 +60,9 @@ $ npm start
 
 
     - (Store) Rota de Criação de Projeto
-              ```
+
+
+              ```node
                 {
                     name: Projeto Bom,
                     navers: [1]
