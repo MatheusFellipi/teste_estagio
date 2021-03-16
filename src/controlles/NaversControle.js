@@ -3,24 +3,30 @@ const knex = require("../database");
 module.exports = {
   async index(req, res, next) {
     try {
-      const results = await knex("navers")
+      const results = await knex("navers");
       return res.json(results);
     } catch (error) {
       next(error);
     }
   },
 
-  async show(req, res) {
+  async show(req, res, next) {
     try {
-      const { id } = req.query;
+      const { id } = req.params;
       const query = knex("navers");
 
-      if (id) {
-        query
-          .where({ id })
-          .join("navers", "navers.id", "=", "project.navers_id")
-          .select("navers.*", "project.project");
-      }
+      query
+        .where({ "navers.id": id })
+        .select(
+          "navers.id",
+          "navers.name",
+          "navers.birthdate",
+          "navers.job_role",
+          "navers.admission_date",
+          "project.project"
+        )
+        .join("project", "project.navers_id", "=", "navers.id");
+
       const results = await query;
 
       return res.send(results);
@@ -37,7 +43,6 @@ module.exports = {
       birthdate,
       admission_date,
     });
-    console.log(req.body);
     try {
       await knex("navers").insert({
         name,
@@ -45,7 +50,10 @@ module.exports = {
         birthdate,
         admission_date,
       });
-      return res.status(201).send();
+      return res.status(201).send({
+        message: "navers criando com sucesso",
+        status: 201,
+      });
     } catch (error) {
       next(error);
     }
@@ -59,7 +67,10 @@ module.exports = {
       await knex("navers")
         .update({ name, job_role, birthdate, admission_date })
         .where({ id });
-      return res.status(201).send();
+      return res.status(201).send({
+        message: "navers atualizado sucesso",
+        status: 201,
+      });
     } catch (error) {
       next(error);
     }
@@ -70,7 +81,10 @@ module.exports = {
     try {
       await knex("navers").where({ id }).del();
 
-      return res.status(201).send();
+      return res.status(201).send({
+        message: "navers deletado sucesso",
+        status: 201,
+      });
     } catch (error) {
       next(error);
     }

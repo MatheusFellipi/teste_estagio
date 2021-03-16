@@ -3,6 +3,15 @@ const knex = require("../database");
 module.exports = {
   async index(req, res, next) {
     try {
+      const results = await knex("project");
+
+      return res.send(results);
+    } catch (error) {
+      next(error);
+    }
+  },
+  async index(req, res, next) {
+    try {
       const { navers_id } = req.query;
       const query = knex("project");
 
@@ -28,14 +37,16 @@ module.exports = {
   },
   async store(req, res, next) {
     try {
-      const { title, navers_id } = req.body;
+      const { project, navers_id } = req.body;
 
-      await knex("projects").insert({
-        title,
+      await knex("project").insert({
+        project,
         navers_id,
       });
 
-      return res.status(201).send();
+      return res.status(201).send({
+        message: "projeto criando com sucesso",
+      });
     } catch (error) {
       next(error);
     }
