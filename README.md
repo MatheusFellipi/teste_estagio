@@ -26,14 +26,14 @@
 
 - Navers
 
-  - index Rota para listagem dos Navers, usa `get` `navers`
+  - (index) Rota para listagem dos Navers, usa `get` `navers`
 
 
                   http://localhost:3333/navers
                
 
 
-- (Show) Rota para detalhar informações de um único naver através de seu identificador usa `get` `navers?id`
+- (Show) Rota para detalhar informações de um único naver através de seu identificador usa `get` `navers/:id`
 
 
               
@@ -65,7 +65,7 @@
           
           
 
-    - (Show) Rota para detalhar um projeto `get` `project?navers_id`
+    - (Show) Rota para detalhar um projeto `get` `project/:id`
 
        
        
