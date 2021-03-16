@@ -4,10 +4,6 @@ module.exports = {
   async index(req, res, next) {
     try {
       const results = await knex("navers")
-        .select("navers.*", "project.*")
-        .from("navers")
-        .innerJoin("project", "navers.id", "project.navers_id");
-
       return res.json(results);
     } catch (error) {
       next(error);
@@ -15,11 +11,22 @@ module.exports = {
   },
 
   async show(req, res) {
-    const { id } = req.params;
+    try {
+      const { id } = req.query;
+      const query = knex("navers");
 
-    const results = await knex("navers").where({ id });
+      if (id) {
+        query
+          .where({ id })
+          .join("navers", "navers.id", "=", "project.navers_id")
+          .select("navers.*", "project.project");
+      }
+      const results = await query;
 
-    return res.json(results);
+      return res.send(results);
+    } catch (error) {
+      next(error);
+    }
   },
 
   async store(req, res, next) {

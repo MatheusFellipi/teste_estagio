@@ -17,7 +17,7 @@ module.exports = {
             "navers.birthdate",
             "navers.job_role",
             "navers.admission_date"
-          )
+          );
       }
       const results = await query;
 
@@ -26,13 +26,13 @@ module.exports = {
       next(error);
     }
   },
-  async create(req, res, next) {
+  async store(req, res, next) {
     try {
       const { title, navers_id } = req.body;
 
       await knex("projects").insert({
         title,
-        user_id,
+        navers_id,
       });
 
       return res.status(201).send();

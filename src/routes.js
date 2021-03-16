@@ -11,6 +11,7 @@ routes.put("/navers/:id", NaversControllers.update);
 routes.delete("/navers/:id", NaversControllers.delete);
  
 routes.get("/project", ProjectController.index);
+routes.post("/project", ProjectController.store);
 
 
 module.exports = routes;
