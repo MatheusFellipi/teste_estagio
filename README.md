@@ -85,7 +85,7 @@
 
  ## sobre o banco (knex)
  
-
+      - nao utilize o banco de dados da bransh banco de dados
   eu utilizei o postegres, voce poder mudar as configuracao no `knexfile`
 
   ```
